@@ -23,7 +23,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             RepositoryPatternTheme {
-                App()
+                val navHostController: NavHostController = rememberNavController()
+                App(navHostController = navHostController)
             }
         }
     }
@@ -35,6 +36,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun NavigationPreview() {
     RepositoryPatternTheme {
-        App()
+        val navHostController: NavHostController = rememberNavController()
+        App(navHostController = navHostController)
     }
 }

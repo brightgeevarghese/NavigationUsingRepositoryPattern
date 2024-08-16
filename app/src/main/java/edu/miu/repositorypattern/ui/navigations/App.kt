@@ -16,8 +16,7 @@ import edu.miu.navdatatransfer.ui.screens.ScreenTwo
 import edu.miu.repositorypattern.ui.components.TopBar
 
 @Composable
-fun App() {
-    val navHostController: NavHostController = rememberNavController()
+fun App(navHostController: NavHostController) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = { TopBar(navController = navHostController) }
