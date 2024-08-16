@@ -23,13 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             RepositoryPatternTheme {
-                val navHostController: NavHostController = rememberNavController()
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    topBar = { TopBar(navController = navHostController)}
-                ) { innerPadding ->
-                    App(navHostController, Modifier.padding(innerPadding))
-                }
+                App()
             }
         }
     }
@@ -41,12 +35,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun NavigationPreview() {
     RepositoryPatternTheme {
-        val navHostController: NavHostController = rememberNavController()
-        Scaffold(
-            modifier = Modifier.fillMaxSize(),
-            topBar = { TopBar(navController = navHostController)}
-        ) { innerPadding ->
-            App(navHostController, Modifier.padding(innerPadding))
-        }
+        App()
     }
 }
